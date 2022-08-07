@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+# Inherit virtual_ab_ota product
+$(call inherit-product, \
+    $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+
 # AB Partitions
 AB_OTA_PARTITIONS += \
     product
