@@ -56,7 +56,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
-ifeq ($(filter %_foles %_parker,$(TARGET_PRODUCT)),)
+ifeq ($(filter %_foles %_parker %_hanoip,$(TARGET_PRODUCT)),)
 $(call inherit-product, device/motorola/sm6150-common/common_dynamic.mk)
 endif
 
@@ -150,11 +150,11 @@ PRODUCT_COPY_FILES += \
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl:64 \
-    android.hardware.boot@1.0-service \
-    android.hardware.boot@1.0-impl.recovery \
-    bootctrl.qcom \
-    bootctrl.qcom.recovery
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service \
+    bootctrl.sm6150 \
+    bootctrl.sm6150.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
