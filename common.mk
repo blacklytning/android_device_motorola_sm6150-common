@@ -56,9 +56,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
-ifeq ($(filter %_foles %_parker %_hanoip,$(TARGET_PRODUCT)),)
 $(call inherit-product, device/motorola/sm6150-common/common_dynamic.mk)
-endif
+
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
 # Properties
 -include $(LOCAL_PATH)/properties.mk
