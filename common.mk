@@ -267,11 +267,11 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor
 
 # FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    init.qti.fm.sh \
-    qcom.fmradio
+# PRODUCT_PACKAGES += \
+#    FM2 \
+#    libqcomfm_jni \
+#    init.qti.fm.sh \
+#    qcom.fmradio
 
 # For config.fs
 PRODUCT_PACKAGES += \
@@ -543,6 +543,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
 # WiFi Display
-PRODUCT_PACKAGES += \
-    libnl \
-    libwfdaac_vendor
+# PRODUCT_PACKAGES += \
+#    libnl \
+#    libwfdaac_vendor
